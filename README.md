@@ -1,4 +1,4 @@
-# Spring 2022 CS111 Final Project
+# state-space search to solve any valid initial configuration of the Eight Puzzle
 This is a project for Spring 2022 CS111   
 Peiyang Liu
 
