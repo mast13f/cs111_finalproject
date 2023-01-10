@@ -1,0 +1,115 @@
+Peiyang Liu
+nickpliu@bu.edu
+
+puzzles with 5-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random				10			7.6			461.3
+BFS					10			5.0			47.1
+DFS (depth limit 20)		10			16.2			19072.7		
+DFS (depth limit 50)		10			48.2			49043.0
+Greedy Search (using h1) 	10			5.4			70.3
+A* (using h1)			10			5.0			6.5
+
+
+
+puzzles with 10-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random				10			12.8			13722.2
+BFS					10			10.0			747.4
+DFS (depth limit 20)		10			18.8			24858.0
+DFS (depth limit 50)		10			49.2			92287.3
+Greedy Search (using h1) 	10			97.6			7422.7
+A* (using h1)			10			10.0			27.3
+
+
+
+puzzles with 15-move optimal solutions
+-------------------------------------
+algorithm                num. solved    avg. moves    avg. states tested
+------------------------------------------------------------------------
+random				10			19.0			49019.2
+BFS					10			15.0			12672.0
+DFS (depth limit 20)		10			17.8			68659.0
+DFS (depth limit 50)		10			48.6			111406.0
+Greedy Search (using h1) 	7			125.9			6486.7
+A* (using h1)			10			15.0			313.8
+
+
+
+
+
+Reflection:
+
+Almost every algorithm can solve the puzzle, but there are big differences in the time and memory consumed by different algorithms. Among them, the A* algorithm (using h1) performed the best. It has the least avg.moves and avg.states tested per file, which means less memory and time usage, and more optimized solutions. In contrast, other algorithms are less efficient. Although the BFS algorithm also gets more optimized solutions, it has a larger avg.states tested than A*, which means it is slightly less efficient. The rest of DFS and Greedy Search are not very efficient. Not only do they have higher avg.moves, but they also have higher avg.states tested. It's worth noting that DFS algorithms with larger depth limits seem to have larger avg.moves and avg.states tested, which means lower efficiency.
+
+
+
+heuristic h2
+------------
+This heuristic uses the sum of differences between actual value and the goal value in the same position, and divided by number of misplaced.
+
+
+
+
+puzzles with 18-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)		8		145.75			8345.76
+Greedy (heuristic h2)		1		22.0				35.0
+# Greedy with any other heuristics
+
+A* (heuristic h1)		10		18.0				35.0
+A* (heuristic h2)		10		18.0				24276.9
+# Greedy with any other heuristics
+
+
+
+puzzles with 21-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)		5		104.6				4172.6
+Greedy (heuristic h2)		0
+# Greedy with any other heuristics
+
+A* (heuristic h1)		10		21				6301.7
+A* (heuristic h2)		3		21				560004.7
+# Greedy with any other heuristics
+
+
+
+puzzles with 24-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)		6		123.7			2856.2
+Greedy (heuristic h2)		0
+# Greedy with any other heuristics
+
+A* (heuristic h1)		9		24			26189.2
+A* (heuristic h2)		0
+# Greedy with any other heuristics
+
+
+
+puzzles with 27-move optimal solutions
+--------------------------------------
+algorithm              num. solved    avg. moves    avg. states tested
+----------------------------------------------------------------------
+Greedy (heuristic h1)		2		129.0				1270.5
+Greedy (heuristic h2)		0		
+# Greedy with any other heuristics
+
+A* (heuristic h1)		0
+A* (heuristic h2)		0
+# Greedy with any other heuristics
+
+
+Reflection:
+The algorithm can be continuously optimized. Some algorithms may get the most accurate answer, but consume relatively more memory and time. Some algorithms do not consume a lot of time and memory, but the answers obtained are not accurate. I don't think a perfect algorithm exists, and different algorithms have different advantages and disadvantages. Optimizing algorithms is difficult.
+
