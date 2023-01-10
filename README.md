@@ -1,4 +1,4 @@
-# state-space search to solve any valid initial configuration of the Eight Puzzle
+# State-space Search to Solve Any Valid Initial Configuration of the Eight Puzzle
 This is a project for Spring 2022 CS111   
 Peiyang Liu
 
